@@ -1,4 +1,5 @@
 # The following is a function that takes data from the provided xlss file and gives results
+# on sales per county
 
 Step 1: Load the data
 burn_data <- read.csv(file.choose())
