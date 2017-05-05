@@ -72,3 +72,6 @@ sales_per_county <- sort(sales_per_county(burn_data), decreasing = T)
 
 # Step 4: Give results in descending order
 sales_per_county[ ,1:47]
+
+# Step 5: Save the results as a csv file into laptop
+write.csv(sales_per_county, file='C:/Users/Admin/Documents/salespercounty.csv', row.names = F)
