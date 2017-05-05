@@ -63,8 +63,7 @@ sales_per_county <- function(burn_data) {
                             Mombasa, Muranga, Nairobi, Nakuru, Nandi, Narok, Nyamira,  
                             Nyandarua, Nyeri, Samburu, Siaya, Taita_Taveta, Tana_River,   
                             Tharaka_Nithi, Trans_Nzioa, Turkana, Uasin_Gishu, Vihiga,
-                            Wajir, West_Pokot
-                            Kajiado, Nyandarua, Kakamega, Siaya, Nyeri, Muranga)
+                            Wajir, West_Pokot)
   return(percentages)
 }
 
