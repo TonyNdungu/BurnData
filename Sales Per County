@@ -71,7 +71,7 @@ sales_per_county <- function(burn_data) {
 # Step 3: Pass the function to the burn data set
 sales_per_county <- sort(sales_per_county(burn_data), decreasing = T)
 
-# Step 4: Give results in descending order
+# Step 4: Give results of the 47 counties
 sales_per_county[ ,1:47]
 
 # Step 5: Save the results as a csv file into laptop
