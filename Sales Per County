@@ -1,0 +1,75 @@
+# The following is a function that takes data from the provided xlss file and gives results
+
+Step 1: Load the data
+burn_data <- read.csv(file.choose())
+
+Step 2: Pre-define the counties included into the function
+
+sales_per_county <- function(burn_data) {
+  tot_all <- length(burn_data$COUNTY)
+  
+  Baringo <- 100*(length(grep("Baringo", burn_data$COUNTY))/tot_all)
+  Bomet <- 100*(length(grep("Bomet", burn_data$COUNTY))/tot_all)
+  Bungoma <- 100*(length(grep("Bungoma", burn_data$COUNTY))/tot_all)
+  Busia <- 100*(length(grep("Busia", burn_data$COUNTY))/tot_all)
+  Elgeyo <- 100*(length(grep("Elgeyo Marakwet", burn_data$COUNTY))/tot_all)
+  Embu <- 100*(length(grep("Embu", burn_data$COUNTY))/tot_all)
+  Garissa <- 100*(length(grep("Garissa", burn_data$COUNTY))/tot_all)
+  HomaBay <- 100*(length(grep("Homa Bay", burn_data$COUNTY))/tot_all)
+  Isiolo <- 100*(length(grep("Isiolo", burn_data$COUNTY))/tot_all)
+  Kajiado <- 100*(length(grep("Kajiado", burn_data$COUNTY))/tot_all)
+  Kakamega <- 100*(length(grep("Kakamega", burn_data$COUNTY))/tot_all)
+  Kericho <- 100*(length(grep("Kericho", burn_data$COUNTY))/tot_all)
+  Kiambu <- 100*(length(grep("Kiambu", burn_data$COUNTY))/tot_all)
+  Kilifi <- 100*(length(grep("Kilifi", burn_data$COUNTY))/tot_all)
+  Kirinyaga <- 100*(length(grep("Kirinyaga", burn_data$COUNTY))/tot_all)
+  Kisii <- 100*(length(grep("Kisii", burn_data$COUNTY))/tot_all)
+  Kisumu <- 100*(length(grep("Kitui", burn_data$COUNTY))/tot_all)
+  Kitui <- 100*(length(grep("Kitui", burn_data$COUNTY))/tot_all)
+  Kwale <- 100*(length(grep("Kwale", burn_data$COUNTY))/tot_all)
+  Laikipia <- 100*(length(grep("Laikipia", burn_data$COUNTY))/tot_all)
+  Lamu <- 100*(length(grep("Lamu", burn_data$COUNTY))/tot_all)
+  Machakos <- 100*(length(grep("Machakos", burn_data$COUNTY))/tot_all)
+  Makueni <- 100*(length(grep("Makueni", burn_data$COUNTY))/tot_all)
+  Mandera <- 100*(length(grep("Mandera", burn_data$COUNTY))/tot_all)
+  Meru <- 100*(length(grep("Meru", burn_data$COUNTY))/tot_all)
+  Migori <- 100*(length(grep("Migori", burn_data$COUNTY))/tot_all)
+  Marsabit <- 100*(length(grep("Marsabit", burn_data$COUNTY))/tot_all)
+  Mombasa <- 100*(length(grep("Mombasa", burn_data$COUNTY))/tot_all)
+  Muranga <- 100*(length(grep("Murang'a", burn_data$COUNTY))/tot_all)
+  Nairobi <- 100*(length(grep("Nairobi", burn_data$COUNTY))/tot_all)
+  Nakuru <- 100*(length(grep("Nakuru", burn_data$COUNTY))/tot_all)
+  Nandi <- 100*(length(grep("Nandi", burn_data$COUNTY))/tot_all)
+  Narok <- 100*(length(grep("Narok", burn_data$COUNTY))/tot_all)
+  Nyamira <- 100*(length(grep("Nyamira", burn_data$COUNTY))/tot_all)
+  Nyandarua <- 100*(length(grep("Nyandarua", burn_data$COUNTY))/tot_all)
+  Nyeri <- 100*(length(grep("Nyeri", burn_data$COUNTY))/tot_all)
+  Samburu <- 100*(length(grep("Samburu", burn_data$COUNTY))/tot_all)
+  Siaya <- 100*(length(grep("Siaya", burn_data$COUNTY))/tot_all)
+  Taita_Taveta <- 100*(length(grep("Taita Taveta", burn_data$COUNTY))/tot_all)
+  Tana_River <- 100*(length(grep("Tana River", burn_data$COUNTY))/tot_all)
+  Tharaka_Nithi <- 100*(length(grep("Tharaka Nithi", burn_data$COUNTY))/tot_all)
+  Trans_Nzioa <- 100*(length(grep("Trans Nzoia", burn_data$COUNTY))/tot_all)
+  Turkana <- 100*(length(grep("Turkana", burn_data$COUNTY))/tot_all)
+  Uasin_Gishu <- 100*(length(grep("UasinGishu", burn_data$COUNTY))/tot_all)
+  Vihiga <- 100*(length(grep("Vihiga", burn_data$COUNTY))/tot_all)
+  Wajir <- 100*(length(grep("Wajir", burn_data$COUNTY))/tot_all)
+  West_Pokot <- 100*(length(grep("West Pokot", burn_data$COUNTY))/tot_all)
+  
+  percentages <- data.frame(Baringo, Bomet, Bungoma, Busia, Elgeyo, Embu, Garissa,
+                            HomaBay, Isiolo, Kajiado, Kakamega, Kericho, Kiambu,
+                            Kilifi, Kirinyaga, Kisii, Kisumu, Kitui, Kwale, Laikipia,
+                            Lamu, Machakos, Makueni, Mandera, Meru, Migori, Marsabit,
+                            Mombasa, Muranga, Nairobi, Nakuru, Nandi, Narok, Nyamira,  
+                            Nyandarua, Nyeri, Samburu, Siaya, Taita_Taveta, Tana_River,   
+                            Tharaka_Nithi, Trans_Nzioa, Turkana, Uasin_Gishu, Vihiga,
+                            Wajir, West_Pokot
+                            Kajiado, Nyandarua, Kakamega, Siaya, Nyeri, Muranga)
+  return(percentages)
+}
+
+# Step 3: Pass the function to the burn data set
+sales_per_county <- sort(sales_per_county(burn_data), decreasing = T)
+
+# Step 4: Give results in descending order
+sales_per_county[ ,1:47]
