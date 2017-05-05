@@ -1,0 +1,17 @@
+# Part 1: Load the required library
+library(data.table)
+
+# Part 2: Load the sample data
+burndata <- read.csv(file.choose())
+# To find out the class of the data
+class(burndata)
+
+# Part 3: Concatenate to use the second column containing registration only
+# Give the colum the variable name burndata_2
+burndata_2 <- data.table(burn_data[,2])
+
+# Part 4: Convert burndata_2 to time series
+burndata_2.ts <- as.ts(burndata_2)
+
+$ Part 5: Plot the results
+plot(burndata_2.ts)
