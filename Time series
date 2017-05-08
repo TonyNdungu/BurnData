@@ -1,3 +1,4 @@
+# This will analyze the rate of registration by customers over time
 # Part 1: Load the required library
 library(data.table)
 
